@@ -1,0 +1,174 @@
+/*Reset بعض التنسيقات الاساسيه */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنسيق العنوان الرئيسي */
+header{
+    background-color: #333; /* تعديل: استخدام background-color بدلاً من color */
+    color: wheat;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* تنسيق الشريط العلوي للـ Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    background-color: rgba(255, 255, 255, 0); /* شفاف */
+   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    position: fixed; /* لتثبيت الشريط */
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease; /* تأثير انسيابي */
+}
+/* عندما يكون الشريط بلون */
+nav.active {
+    background-color: white; /* يصبح أبيض عند التمرير */
+}
+
+
+
+.nav-left {
+    justify-content: flex-start; /* لمحاذاة العناصر على اليسار */
+}
+
+.nav-right {
+    justify-content: flex-end; /* لمحاذاة العناصر على اليمين */
+}
+
+
+
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* روابط اليسار واليمين */
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-liks li{
+    margin-left: 20px; /* تعديل: استخدم margin-left بدلاً من margin: left */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.nav-liks li a:hover {
+    color: #4CAF50; /* لون عند التمرير */
+}
+
+/* تنسيق قسم hero (الصور مع العناوين) */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0;
+    margin-top: -90px; /* إضافة مساحة بين الفوتر والـ hero */
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    width: 490px; /* عرض الصورة */
+    height:850px;
+    border-radius: 0px;
+}
+
+.category h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #545353;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px 0;
+}
+
+
+/* تخصيص تنسيق الشريط العلوي في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* تغيير تنسيق الشريط العلوي إلى عمودي عند الشاشات الصغيرة */
+        align-items: center; /* محاذاة العناصر في المنتصف عموديًا */
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        list-style-type: none; /* إزالة النقاط */
+        display: flex; /* ترتيب العناصر بشكل أفقي */
+        gap: 20px; /* إضافة مسافة بين العناصر */
+    }
+
+    .nav-links li a {
+        font-size: 1.3em;
+    }
+
+    .hero {
+        flex-direction: column; /* ترتيب الصور والعناوين بشكل عمودي */
+        padding: 20px ; /* تقليل المسافة بين العناصر */
+    }
+
+    .category img {
+        width: 150px; /* تقليل عرض الصور لتناسب الشاشة الصغيرة */
+    }
+
+    .category h2 {
+        font-size: 1.5em;
+        margin-top: 15px; /* المسافة بين العنوان والصورة */
+    }
+ }
+ body{
+    background-color: #2d2d2d;
+}  
+/* تنسيق الصورة الكبيرة لتبدأ من الأعلى */
+.big-image img {
+    width: 100%; /* لجعل الصورة تأخذ عرض الشاشة */
+    height:800; /* الحفاظ على نسبة العرض للطول */
+    border-radius: 0; /* لضبط الحواف حادة */
+    display: block; /* لجعل الصورة تظهر بشكل صحيح */
+    margin: 0; /* إزالة أي مسافة إضافية */
+padding: 0;
+}
+.big-image {
+    margin: 0;
+    padding: 0;
+    position: relative; /* للتأكد من أن العنصر يبدأ من الأعلى */
+}
+
+
+
+/* التأكد من أن الصفحة تبدأ بدون أي مسافة علوية */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* منع أي شريط تمرير أفقي */
+}
+
